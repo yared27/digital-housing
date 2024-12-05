@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
+import React from 'react';
 import Welcome from './pages/Welcome.js'
 import Navbar from './Component/Navbar/Navbar.jsx';
 import SignupForm from './pages/signup.js';
