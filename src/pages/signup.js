@@ -32,7 +32,7 @@ const SignupForm = ()=>{
         }
         else if  (form.checkValidity()) {
             try{
-                const response=await axios.post('http://localhost:5000/signup',formData {headers:{'Content-Type':'application/json',},});
+                const response=await axios.post('http://localhost:5000/auth/signup',formData, {headers:{'Content-Type':'application/json',}},);
                 console.log(response.data);
                 navigate('/Identifier');
                 console.log(response.data);
@@ -57,7 +57,7 @@ const SignupForm = ()=>{
                         </div>
                         <div>
                             <label htmlFor="LNAME" className="block font-medium mb-1">LAST NAME</label>
-                            <input type="text" className="w-full border border-gray-300 p-1 rounded" id="LNAME" placeholder="ENTER YOUR LAST NAME" name="LNAME" value={formData.LANAME} onChange={handleChange} required/>
+                            <input type="text" className="w-full border border-gray-300 p-1 rounded" id="LNAME" placeholder="ENTER YOUR LAST NAME" name="LNAME" value={formData.LNAME} onChange={handleChange} required/>
                         </div>
                         <div>
                             <label htmlFor="EMAIL" className="block font-medium mb-1" >EMAIL</label>
