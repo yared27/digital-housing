@@ -60,14 +60,14 @@ const LoginForm = ()=>{
                 <input type="password" className="border border-gray-300 w-full p-2" name="PASSWORD" value={formData.PASSWORD} onChange={handleChange} required/>
             </div>
             <div>
-             <button type="submit" className="border mt-8 mx-[150px] bg-blue-500 hover:bg-blue-300 p-2 rounded w-4xl text-white">Submit</button>
+             <button type="submit" className="border mt-8 mx-[150px] bg-blue-900 hover:bg-blue-600 p-2 rounded w-4xl text-white">Submit</button>
              </div>
          </form> 
             <div>
               <br/>
-              <a href="4" className=" text-blue-500">FORGOT PASSWORD</a>
+              <a href="4" className=" text-blue-900">FORGOT PASSWORD</a>
               <br/>
-              <Link to={"/SignupForm"}className="text-blue-500" > CREATE AN ACOUNT</Link>
+              <Link to={"/SignupForm"}className="text-blue-900" > CREATE AN ACOUNT</Link>
 
               </div>
           </div>
