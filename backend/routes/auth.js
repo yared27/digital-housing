@@ -58,6 +58,7 @@ router.post('/login',(req,res)=>{
             const user =results[0];
             console.log(user.email);
             console.log(PASSWORD);
+            console.log(user.password)
             const isMatch= await  bcrypt.compare(PASSWORD,user.password);
             if(isMatch){
                 res.status(200).json({message:'login successfully'});
