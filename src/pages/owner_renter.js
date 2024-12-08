@@ -23,10 +23,10 @@ const Identifier= ()=>{
         </div>
         <div>
             <h1 className="bold m-2 text-red-400">PLEASE CLICK RENTER IF YOU WANT TO RENT A HOUSE OR BULDING ELSE CLICK OWNER </h1>
-            <button className="rounded text-white bg-blue-500 hover:bg-blue-300 p-2 m-4">OWNER </button>
-            <button className="rounded text-white bg-blue-500 hover:bg-blue-300 p-2 m-4" onClick={navigat()}>RENTER</button>
+            <button className="rounded text-white bg-blue-900 hover:bg-blue-500 p-2 m-4">OWNER </button>
+            <button className="rounded text-white bg-blue-900 hover:bg-blue-500 p-2 m-4" onClick={navigat()}>RENTER</button>
         </div> 
-        <div className=" flex py-[40px] pb-[40px] gap-[30px] text-left border bordert-gray-300  mt-[70px]">
+        <section className=" flex min-h-screen  py-[40px] pb-[40px] gap-[30px] text-left text-white border-t border-red-200 cover bg-blue-900 mt-auto mb-0 ">
           <div>
              <p>
             
@@ -49,7 +49,7 @@ const Identifier= ()=>{
             </p>
         </div>
         
-        </div>
+        </section>
         </div>
     );
 }
