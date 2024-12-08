@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import {toast,ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 const SignupForm = ()=>{
     const [formData,setFormData]=useState({
@@ -27,17 +29,34 @@ const SignupForm = ()=>{
         const form = e.target;
         console.log("handle called")
         if(formData.PASSWORD!==formData.CONFIRM){
-            setError('Passwords do not match.');
+            toast.error("Passwords do not match!",{
+                position:'bottom-right',
+                autoClose:3000
+            })
+            // setError('Passwords do not match.');
             return;
         }
+
         else if  (form.checkValidity()) {
+            if (formData.PASSWORD.length<8){
+                toast.error("The password must contain at least 8 character",{
+                    position:'top-center',
+                    autoClose:3000
+                })
+                return
+            }
             try{
                 const response=await axios.post('http://localhost:5000/auth/signup',formData, {headers:{'Content-Type':'application/json',}},);
-                console.log(response.data);
                 navigate('/Identifier');
-                console.log(response.data);
             }
             catch(error){
+                    if(error.response.status === 400){
+                        toast.error("Email Already Registered ",{
+                            position:'top-right',
+                            autoClose:3000,
+                        });
+                        return;
+                    }
                 console.error("Error sending form data:",error);
             }
         }

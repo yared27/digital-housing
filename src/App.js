@@ -7,12 +7,14 @@ import SignupForm from './pages/signup.js';
 import LoginForm from './pages/login.js';
 import Identifier from './pages/owner_renter.js';
 import {BrowserRouter as Router,Routes,Route, BrowserRouter} from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
       <div>
           {/* <div className='App'>
         </div> */}
+        <ToastContainer/>
         <BrowserRouter>
             <Navbar/>
             <Routes>
