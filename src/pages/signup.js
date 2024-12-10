@@ -6,16 +6,16 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 const SignupForm = ()=>{
     const [formData,setFormData]=useState({
-        FNAME:'',
-        LNAME:'',
-        EMAIL:'',
-        PHON_NO:'',
-        COUNTRY:'',
-        REGION:'',
-        CITY:'',
-        SUBCITY:'',
-        PASSWORD:'',
-        CONFIRM:''
+        firstName:'',
+        lastname:'',
+        email:'',
+        phone_number:'',
+        country:'',
+        region:'',
+        city:'',
+        subcity:'',
+        password:'',
+        confirm:''
 
     })
     const [error,setError]=useState('');
@@ -28,7 +28,7 @@ const SignupForm = ()=>{
         e.preventDefault();
         const form = e.target;
         console.log("handle called")
-        if(formData.PASSWORD!==formData.CONFIRM){
+        if(formData.password!==formData.confirm){
             toast.error("Passwords do not match!",{
                 position:'bottom-right',
                 autoClose:3000
@@ -38,7 +38,7 @@ const SignupForm = ()=>{
         }
 
         else if  (form.checkValidity()) {
-            if (formData.PASSWORD.length<8){
+            if (formData.password.length<8){
                 toast.error("The password must contain at least 8 character",{
                     position:'top-center',
                     autoClose:3000
@@ -72,45 +72,45 @@ const SignupForm = ()=>{
                  <div className="flex-1 space-y-4">
                        <div>
                             <label htmlFor="FNAME" className="block font-medium mb-1">FIRST NAME</label>
-                            <input type="text" id="FNAME" placeholder="ENTER YOUR NAME " className="w-full p-1 border border-gray-300 rounded"  name="FNAME" value={formData.FNAME} onChange={handleChange} required/>
+                            <input type="text" id="FNAME" placeholder="ENTER YOUR NAME " className="w-full p-1 border border-gray-300 rounded"  name="firstname" value={formData.firstname} onChange={handleChange} required/>
                         </div>
                         <div>
                             <label htmlFor="LNAME" className="block font-medium mb-1">LAST NAME</label>
-                            <input type="text" className="w-full border border-gray-300 p-1 rounded" id="LNAME" placeholder="ENTER YOUR LAST NAME" name="LNAME" value={formData.LNAME} onChange={handleChange} required/>
+                            <input type="text" className="w-full border border-gray-300 p-1 rounded" id="LNAME" placeholder="ENTER YOUR LAST NAME" name="lastname" value={formData.lastname} onChange={handleChange} required/>
                         </div>
                         <div>
                             <label htmlFor="EMAIL" className="block font-medium mb-1" >EMAIL</label>
-                            <input type="text" className="border boder-gray-300 w-full p-1 rounded" id="EMAIL" placeholder="ENTER YOUR EMAIL" name='EMAIL' value={formData.EMAIL} onChange={handleChange} required/>
+                            <input type="text" className="border boder-gray-300 w-full p-1 rounded" id="EMAIL" placeholder="ENTER YOUR EMAIL" name='email' value={formData.email} onChange={handleChange} required/>
                         </div>
                         <div>
                             <label htmlFor="PHON_NO" className="block mb-1 font-medium">PHONE NUMBER</label>
-                            <input type="number" className="w-full border boder-gray-300 p-1 rounded" id="PHON_NO" placeholder="930833496" name="PHON_NO" value={formData.PHON_NO} onChange={handleChange} required/>
+                            <input type="number" className="w-full border boder-gray-300 p-1 rounded" id="PHON_NO" placeholder="930833496" name="phone_number" value={formData.phone_number} onChange={handleChange} required/>
                         </div>
                         <div>
                             <label htmlFor="COUNTRY" className="block font-medium mb-1">COUNTRY</label>
-                            <input type='text' id="COUNTRY" className="w-full border border-gray p-1 rounded" placeholder="Ethiopia" name="COUNTRY" value={formData.COUNTRY} onChange={handleChange} required/>
+                            <input type='text' id="COUNTRY" className="w-full border border-gray p-1 rounded" placeholder="Ethiopia" name="country" value={formData.country} onChange={handleChange} required/>
                         </div>
                   </div>
                  <div className="flex-1 space-y-4">
                     <div>
                         <label htmlFor="REGION"class className="block font-medium mb-1">REGION</label>
-                        <input type="text" id="REGION" className="w-full border border-gray-300 p-1 rounded" placeholder="SOUTH ETHIOPIA" name="REGION" value={formData.REGION} onChange={handleChange} required/>
+                        <input type="text" id="REGION" className="w-full border border-gray-300 p-1 rounded" placeholder="SOUTH ETHIOPIA" name="region" value={formData.region} onChange={handleChange} required/>
                     </div>
                     <div>
                         <label htmlFor="CITY" className="block font-medium mb-1">CITY</label>
-                        <input type="text" id="CITY" className="w-full border border-gray-300 rounded p-1" placeholder="ARBA MINCH" name="CITY" value={formData.CITY} onChange={handleChange} required/>
+                        <input type="text" id="CITY" className="w-full border border-gray-300 rounded p-1" placeholder="ARBA MINCH" name="city" value={formData.city} onChange={handleChange} required/>
                     </div>
                     <div>
                         <label htmlFor="SUBCITY" className="block font-medium mb-1">SUBCITY</label>
-                        <input id="SUBCITY" type="text" className="w-full border border-gray-300 rounded p-1" placeholder="SECHA" name="SUBCITY" value={formData.SUBCITY} onChange={handleChange} required/>
+                        <input id="SUBCITY" type="text" className="w-full border border-gray-300 rounded p-1" placeholder="SECHA" name="subcity" value={formData.subcity} onChange={handleChange} required/>
                     </div>
                     <div>
                         <label htmlFor="PASSWORD" className="block font-medium mb-1">SET PASSWORD</label>
-                        <input id="PASSWORD" className="w-full border border-gray-300 p-1 rounded" type="password" name="PASSWORD" value={formData.PASSWORD} onChange={handleChange} required/>
+                        <input id="PASSWORD" className="w-full border border-gray-300 p-1 rounded" type="password" name="password" value={formData.password} onChange={handleChange} required/>
                     </div>
                     <div>
                         <label htmlFor="CONFIRM" className="block font-medium mb-1">CONFIRM PASSWORD</label>
-                        <input id="CONFIRM" className="w-full border border-gray-300 p-1 rounded " type="password" name="CONFIRM" value={formData.CONFIRM} onChange={handleChange} required/>
+                        <input id="CONFIRM" className="w-full border border-gray-300 p-1 rounded " type="password" name="confirm" value={formData.confirm} onChange={handleChange} required/>
                     </div>
                  </div>
                 </div> 
