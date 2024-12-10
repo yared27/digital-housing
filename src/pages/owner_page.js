@@ -6,7 +6,7 @@ const HomesList = ()=>{
     return(
     <section>
         <h1 className="font-medium bold" >
-            Choose What To Rent ...
+            Choose What to Rent
         </h1>
     </section>
 

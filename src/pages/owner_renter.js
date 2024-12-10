@@ -1,5 +1,5 @@
 import React from "react";
-import HomesList from "./home_to_rent";
+import HomesList from "./owner_page";
 import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const Identifier= ()=>{
