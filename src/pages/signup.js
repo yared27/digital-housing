@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 const SignupForm = ()=>{
     const [formData,setFormData]=useState({
-        firstName:'',
+        firstname:'',
         lastname:'',
         email:'',
         phone_number:'',
