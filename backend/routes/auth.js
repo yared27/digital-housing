@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const router=express.Router();
 const db=require('../db');
 const jwt=require('jsonwebtoken');
-const User=require('../models/user');
+const User=require('../models/User');
 //signup
 router.post('/signup',async(req,res)=>{
     const {firstname,lastname,email,phone_number,country,region,city,subcity,password}=req.body;

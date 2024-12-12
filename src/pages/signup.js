@@ -24,6 +24,21 @@ const SignupForm = ()=>{
         const {name,value}=e.target
         setFormData({ ...formData,[name]:value})
     }
+    const generatepass=async()=>{
+     try{
+        const autopass= await axios.get('https://api.genratr.com/?length=16&uppercase&lowercase&special$number');
+            const pass=autopass.data.password
+            console.log(autopass); 
+            setFormData({ ...formData ,password:pass,confirm:pass});
+            await navigator.clipboard.writeText(pass);
+            alert("Password Copied to clipboard");
+     }
+      catch(error){
+         console.error("Error in generating password");
+      }
+          
+    }
+    
     const  handleSubmit=async(e)=> {
         e.preventDefault();
         const form = e.target;
@@ -80,7 +95,7 @@ const SignupForm = ()=>{
                         </div>
                         <div>
                             <label htmlFor="EMAIL" className="block font-medium mb-1" >EMAIL</label>
-                            <input type="text" className="border boder-gray-300 w-full p-1 rounded" id="EMAIL" placeholder="ENTER YOUR EMAIL" name='email' value={formData.email} onChange={handleChange} required/>
+                            <input type="email" className="border boder-gray-300 w-full p-1 rounded" id="EMAIL" placeholder="ENTER YOUR EMAIL" name='email' value={formData.email} onChange={handleChange} required/>
                         </div>
                         <div>
                             <label htmlFor="PHON_NO" className="block mb-1 font-medium">PHONE NUMBER</label>
@@ -105,9 +120,13 @@ const SignupForm = ()=>{
                         <input id="SUBCITY" type="text" className="w-full border border-gray-300 rounded p-1" placeholder="SECHA" name="subcity" value={formData.subcity} onChange={handleChange} required/>
                     </div>
                     <div>
+                        <button className="border block bg-blue-900 hover:bg-red-500  text-white font-bold p-2 rounded" onClick={generatepass}>Generate Password</button>
+                    </div>
+                    <div>
                         <label htmlFor="PASSWORD" className="block font-medium mb-1">SET PASSWORD</label>
                         <input id="PASSWORD" className="w-full border border-gray-300 p-1 rounded" type="password" name="password" value={formData.password} onChange={handleChange} required/>
                     </div>
+                    
                     <div>
                         <label htmlFor="CONFIRM" className="block font-medium mb-1">CONFIRM PASSWORD</label>
                         <input id="CONFIRM" className="w-full border border-gray-300 p-1 rounded " type="password" name="confirm" value={formData.confirm} onChange={handleChange} required/>
