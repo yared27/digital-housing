@@ -3,8 +3,9 @@ import HomesList from "./owner_page";
 import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const Identifier= ()=>{
-    function navigat(){
-        Navigate("/HomesList")
+    const navigators=useNavigate();
+    const navigat=()=>{
+        navigators("/HomesList")
 
     }
     return(
@@ -24,7 +25,7 @@ const Identifier= ()=>{
         <div>
             <h1 className="bold m-2 text-red-400">PLEASE CLICK RENTER IF YOU WANT TO RENT A HOUSE OR BULDING ELSE CLICK OWNER </h1>
             <button className="rounded text-white bg-blue-900 hover:bg-blue-500 p-2 m-4">OWNER </button>
-            <button className="rounded text-white bg-blue-900 hover:bg-blue-500 p-2 m-4" onClick={navigat()}>RENTER</button>
+            <button className="rounded text-white bg-blue-900 hover:bg-blue-500 p-2 m-4" onClick={navigat}>RENTER</button>
         </div> 
         <section className=" flex min-h-screen  py-[40px] pb-[40px] gap-[30px] text-left text-white border-t border-red-200 cover bg-blue-900 mt-auto mb-0 ">
           <div>
