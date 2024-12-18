@@ -80,10 +80,10 @@ const SignupForm = ()=>{
         }
     };
     return(
-            <form  onSubmit={handleSubmit}>
-             <div className="max-w-4xl mx-auto p-4 mx-auto mt-7  P-8 bg-white shadow-lg rounded-lg">
+            <form  onSubmit={handleSubmit} className="h-[500px] overflow-y-auto max-w-md mx-auto p-4 mx-auto mt-[100px]  P-8  bg-white shadow-lg rounded-lg ">
+             {/* <div className="max-w-4xl mx-auto p-4 mx-auto mt-7  P-8 bg-white shadow-lg rounded-lg"> */}
                <h1 className="my-1 text-center mb-6 font-bold">  SIGN UP</h1>
-                <div className="flex flex-col md:flex-row gap-8">
+                {/* <div className="flex flex-col md:flex-row gap-8"> */}
                  <div className="flex-1 space-y-4">
                        <div>
                             <label htmlFor="FNAME" className="block font-medium mb-1">FIRST NAME</label>
@@ -105,8 +105,8 @@ const SignupForm = ()=>{
                             <label htmlFor="COUNTRY" className="block font-medium mb-1">COUNTRY</label>
                             <input type='text' id="COUNTRY" className="w-full border border-gray p-1 rounded" placeholder="Ethiopia" name="country" value={formData.country} onChange={handleChange} required/>
                         </div>
-                  </div>
-                 <div className="flex-1 space-y-4">
+                  {/* </div> */}
+                 {/* <div className="flex-1 space-y-4"> */}
                     <div>
                         <label htmlFor="REGION"class className="block font-medium mb-1">REGION</label>
                         <input type="text" id="REGION" className="w-full border border-gray-300 p-1 rounded" placeholder="SOUTH ETHIOPIA" name="region" value={formData.region} onChange={handleChange} required/>
@@ -131,12 +131,12 @@ const SignupForm = ()=>{
                         <label htmlFor="CONFIRM" className="block font-medium mb-1">CONFIRM PASSWORD</label>
                         <input id="CONFIRM" className="w-full border border-gray-300 p-1 rounded " type="password" name="confirm" value={formData.confirm} onChange={handleChange} required/>
                     </div>
-                 </div>
+                 {/* </div> */}
                 </div> 
-                <div className="text-center mb-3 mt-8 mx-[400px]">  
-                <button className="border block bg-red-700 rounded hover:bg-red-500 text-white font-bold py-2 px-4 " type="submit" >Register</button>
+                <div className="text-center mb-3 mt-8 ">  
+                <button className="border  block bg-red-700 rounded hover:bg-red-500 text-white font-bold py-2 px-4 " type="submit" >Register</button>
                 </div>
-            </div> 
+            {/* </div>  */}
             </form>
     );
 };
