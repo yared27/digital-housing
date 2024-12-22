@@ -69,7 +69,7 @@ const HomesList = ()=>{
             </div>
            
         </form>
-       {FormData.images.length>0 &&(FormData.image.map((file,index)=>{
+       {FormData.images.length>0 &&(FormData.images.map((file,index)=>{
         <img
         key={index}
         src={URL.createObjectURL(file)}

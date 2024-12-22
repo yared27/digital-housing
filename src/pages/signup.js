@@ -62,7 +62,7 @@ const SignupForm = ()=>{
             }
             try{
                 const response=await axios.post('http://localhost:5000/auth/signup',formData, {headers:{'Content-Type':'application/json',}},);
-                navigate('/Identifier');
+                navigate('/LoginForm');
             }
             catch(error){
                     if(error.response.status === 400){

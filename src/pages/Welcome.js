@@ -11,6 +11,8 @@ function Welcome(){
             <button className='bg-blue-900 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded'>Login</button>
             </Link>
         </div>
+        <div className='border-t border-gray-300 my-8 bg-blue-900 h-screen'>
+        </div>
     </div>);
 }
 export default Welcome;
