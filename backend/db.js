@@ -1,6 +1,9 @@
-const mysql=require("mysql2"); 
-const {Sequelize}=require('sequelize');
-require('dotenv').config();
+// const mysql=require("mysql2"); 
+import mysql from 'mysql2';
+import {Sequelize} from 'sequelize' 
+import dotenv from 'dotenv';
+dotenv.config();
+// require('dotenv').config();
 const sequelize =new Sequelize(process.env.BD_USERNAME,
     process.env.BD_USERNAME,
     process.env.DB_PASSWORD,
@@ -17,5 +20,5 @@ sequelize.authenticate()
    .catch((err)=>{
     console.log("unable to connect the database: ", err);
    })
-module.exports=sequelize;
+export default sequelize;
 

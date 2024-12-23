@@ -1,21 +1,28 @@
-const express = require('express');
-require('dotenv').config();
-const cors = require('cors');
-const bodyParser=require('body-parser');
-const jwt= require('jsonwebtoken')
-const authRoutes=require('./routes/auth');
-const adminRoutes=require('./routes/admin');
-const sequelize=require('./db');
-// const user =require('./models/User');
+import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import jwt from 'jsonwebtoken';
+import { fileURLToPath } from 'url';
+import authRoutes from './routes/auth.js';
+import adminRoutes from './routes/admin.js';
+import owner_propertyRoutes from './routes/owner_property.js';
+import sequelize from './db.js';
+
 const PORT = process.env.PORT;
 const app = express();
-const path=require('path');
+import path, { dirname } from 'path';
 app.use(bodyParser.json());
-
+app.use(express.urlencoded({extended:true}));
 app.use(cors());
 app.use(express.json());
 app.use('/auth',authRoutes);
 app.use('/admin',adminRoutes);
+app.use('/owner_property',owner_propertyRoutes);
+//create-dirname 
+const __filename=fileURLToPath(import.meta.url);
+const __dirname=path.dirname(__filename);
 //serve  react frontend 
 app.use(express.static(path.join(__dirname,'../build')));
 app.get('*',(req,res)=>{

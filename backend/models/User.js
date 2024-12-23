@@ -1,5 +1,6 @@
-const {DataTypes}=require('sequelize')
-const db=require('../db');
+import { DataTypes, Sequelize } from 'sequelize';
+import db from '../db.js'
+// const db=require('../db');
 const user=db.define('user',{
     firstname:{
         type:DataTypes.STRING,
@@ -42,9 +43,29 @@ const user=db.define('user',{
         type:DataTypes.STRING,
         allowNull:false
     }
-
-
-
 });
-module.exports=user
+// owners property
+const properties=db.define('properties',{
+    type:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    city:{
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    cost:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    contact:{
+        type:DataTypes.STRING,
+          allowNull:false
+    },
+    imageUrl:{
+        type:Sequelize.JSON,
+        allowNull:false
+    }
 
+})
+export {user,properties}
