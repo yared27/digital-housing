@@ -105,7 +105,10 @@ const HomesList = ()=>{
         alt={`Preview ${index}`}
         className='w-24 h-24'
         />)
-       }))}
+       }))} 
+       <div className='border-t border-gray-500 bg-blue-900 h-screen'>
+
+       </div>
 
     </section>
 

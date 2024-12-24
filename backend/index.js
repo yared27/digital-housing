@@ -32,7 +32,7 @@ app.get('*',(req,res)=>{
     try{
     await sequelize.authenticate();
     console.log("db connected");
-    await  sequelize.sync();
+    await  sequelize.sync({force:true});
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
     });
