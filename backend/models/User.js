@@ -68,4 +68,4 @@ const properties=db.define('properties',{
     }
 
 })
-export {user,properties}
+export  {user,properties}

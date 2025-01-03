@@ -1,8 +1,7 @@
 import express from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { user, properties } from '../models/User.js'; 
-import db from '../db.js';
+import {user, properties } from '../models/User.js';
 // routes/owner_property.js
  // Named import of both models
 // import User from '../models/User.js';  // Ensure you add the `.js` extension
@@ -17,7 +16,7 @@ router.post('/signup', async (req, res) => {
             return res.status(400).json({ error: "Email already exists" });
         }
         const hashedpassword = await bcrypt.hash(password, 10);
-        const user = await user.create({
+        const new_user = await user.create({
             firstname,
             lastname,
             email,
@@ -28,7 +27,7 @@ router.post('/signup', async (req, res) => {
             subcity,
             password: hashedpassword
         });
-        res.status(201).json({ message: 'User created successfully', user });
+        res.status(201).json({ message: 'User created successfully', new_user });
     }
     catch (error) {
         console.error(error);
