@@ -11,6 +11,7 @@ yarn-error.log*
 .env.local
 .env.development.local
 .env.producton.local
+/backend/node_modules/
 
 # ide files
 .vscode/
