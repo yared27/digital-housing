@@ -7,7 +7,7 @@ const Navbar_page = () =>{
     const handleMouserEnter=()=>setIsOpen(true);
     const handleMouseleave=()=>setIsOpen(false)
     return (<div>
-<nav onMouseLeave={handleMouseleave} className="bg-white dark:bg-blue-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+<nav onMouseLeave={handleMouseleave} className="bg-white dark:bg-blue-600 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <Link to="/SignupForm"  className="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo"/>
@@ -26,11 +26,12 @@ const Navbar_page = () =>{
     </button>
   </div>
   <div className={`items-center justify-between  w-full md:flex md:w-auto md:order-1 ${IsOpen? 'block':'hidden'}`} id="navbar-sticky">
-    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-500 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-blue-900 dark:bg-gray-800 md:dark:bg-blue-900 dark:border-gray-700">
-            <li><Link to={"/"}  className="block py-2 px-3 text-gra-900 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-100" aria-current="page" >HOME</Link></li>
-            <li><Link to={"#"} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" href="#">ABOUT</Link></li>
-            <li><Link to= "%" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" >SERVICE</Link></li> 
-            <li><Link to={"@"} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">CONTACT</Link></li>
+    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg bg-blue-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-900 md:bg-blue-600 dark:bg-gray-800 md:dark:bg-blue-600">
+            <li><Link to="/" aria-current={location.pathname==="/"? "page":undefined}
+            className="block py-2 px-3 text-gray-900 hover:bg-gtra rounded md:bg-transparent bg-blue-700 md:text-blue-700 md:p-0 md:dark:text-blue-100"  >HOME</Link></li>
+            <li><Link to="#" aria-current={location.pathname==="#"? "page":undefined} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" href="#">ABOUT</Link></li>
+            <li><Link to= "%" aria-current ={location.pathname==="%"? "page":undefined} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" >SERVICE</Link></li> 
+            <li><Link to="@" aria-current={location.pathname==="@"? "page":undefined} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">CONTACT</Link></li>
             </ul>
         </div>
     </div>

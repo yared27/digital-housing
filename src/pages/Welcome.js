@@ -7,7 +7,7 @@ function Welcome(){
 
         </div>
         {/* text-center mt-[210px] mb-10 text-4xl */}
-        <div className='border-t  mt-[200 items-center px] flex flex-col border-gray-300  bg-blue-900 h-screen'>
+        <div className='border-t  mt-[200 items-center px] flex flex-col border-gray-300  bg-blue-600 h-screen'>
             <div className='items-center '>
               <h1 className=' mb-[50px] w-[800px] text-[20px] text-white mt-[80px]'>  At Digital Housing, we revolutionize the way you find and manage homes.
                 Our platform offers a seamless experience for browsing rental properties,
