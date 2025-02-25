@@ -7,6 +7,7 @@ import jwt from 'jsonwebtoken';
 import { fileURLToPath } from 'url';
 import authRoutes from './routes/auth.js';
 import adminRoutes from './routes/admin.js';
+import auto_passwordRoutes from './routes/auto_password_generator.js'
 import owner_propertyRoutes from './routes/owner_property.js';
 import sequelize from './db.js';
 
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use('/auth',authRoutes);
 app.use('/admin',adminRoutes);
 app.use('/owner_property',owner_propertyRoutes);
+app.use('/auto_password',auto_passwordRoutes);
 //create-dirname 
 const __filename=fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);

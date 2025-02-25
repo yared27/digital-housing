@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 function Welcome(){
    return( <div>
         <div className="space-x-4  h-screen bg-cover flex justify-left  items-center   " style={{backgroundImage:"url('/images/im.jpg')"}} > 
+         <div>
           <h1 className='mx-[20px] text-left mb-40 animation-marquee text-white text-[40px]  font-bold'> Welcome To The DH </h1>
-
+          </div>
         </div>
         {/* text-center mt-[210px] mb-10 text-4xl */}
         <div className='border-t  mt-[200 items-center px] flex flex-col border-gray-300  bg-blue-600 h-screen'>

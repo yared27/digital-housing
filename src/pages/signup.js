@@ -26,12 +26,11 @@ const SignupForm = ()=>{
     }
     const generatepass=async()=>{
      try{
-        const autopass= await axios.get('https://api.genratr.com/?length=16&uppercase&lowercase&special$number');
-            const pass=autopass.data.password
-            console.log(autopass); 
-            setFormData({ ...formData ,password:pass,confirm:pass});
-            await navigator.clipboard.writeText(pass);
-            alert("Password Copied to clipboard");
+        const response=await axios.get("http://localhost:5000/auto_password_generator/auto_password");
+        const data=await response.json();
+        setFormData({ ...formData,password:data.password,confirm:data.password})
+        await navigator.clipboard.writeText(data.password);
+        alert("Password Copied to clipboard");
      }
       catch(error){
          console.error("Error in generating password");
