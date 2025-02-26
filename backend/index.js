@@ -21,7 +21,7 @@ app.use(express.json());
 app.use('/auth',authRoutes);
 app.use('/admin',adminRoutes);
 app.use('/owner_property',owner_propertyRoutes);
-app.use('/auto_password',auto_passwordRoutes);
+app.use('/auto_password_generator',auto_passwordRoutes);
 //create-dirname 
 const __filename=fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);

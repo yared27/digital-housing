@@ -26,7 +26,7 @@ const SignupForm = ()=>{
     }
     const generatepass=async()=>{
      try{
-        const response=await axios.get("http://localhost:5000/auto_password_generator/auto_password");
+        const response=await fetch("http://localhost:5000/auto_password_generator/auto_password");
         const data=await response.json();
         setFormData({ ...formData,password:data.password,confirm:data.password})
         await navigator.clipboard.writeText(data.password);
