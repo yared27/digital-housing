@@ -103,10 +103,10 @@ const HomesList = ()=>{
         key={index}
         src={URL.createObjectURL(file)}
         alt={`Preview ${index}`}
-        className='w-24 h-24'
+        className='inline-flex w-24 h-24 ml-6 mb-8'
         />)
        }))} 
-       <div className='border-t border-gray-500 bg-blue-900 h-screen'>
+       <div className='border-t border-gray-500 bg-blue-600 h-screen'>
 
        </div>
 
