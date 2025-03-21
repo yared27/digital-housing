@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "your-build-command-here"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +24,7 @@
     "sequelize": "^6.37.5"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
-  },
+    "nodemon": "^3.1.7",
+    "multer": "^1.4.5-lts.1"   },
   "type": "module"
-}
+  }
