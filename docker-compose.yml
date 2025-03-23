@@ -13,9 +13,9 @@ services:
     environment:
       - NODE_ENV=production
       - DB_HOST=database
-      - DB_USER=root
-      - DB_PASSWORD="Yared(2723)"
-      - DB_NAME=digital_housing
+      - DB_USER=digital_housing1
+      - DB_PASSWORD=Yared123
+      - DB_NAME=digital_housing1
     depends_on:
       - database
 
@@ -24,12 +24,12 @@ services:
     container_name: mysql_container
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: "Yared(2723)"
-      MYSQL_DATABASE: digital_housing
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: "Yared(2723)"
+      MYSQL_ROOT_PASSWORD: root1234
+      MYSQL_DATABASE: digital_housing1
+      MYSQL_USER: digital_housing1
+      MYSQL_PASSWORD: Yared123
     ports:
-      - "3307:3306"
+      - "3307:3306"  # Maps MySQL container's port 3306 to host 3307
     volumes:
       - mysql_data:/var/lib/mysql
 
