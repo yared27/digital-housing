@@ -1,15 +1,18 @@
 # dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp
 .pnp.js
-/backend/node_modules/
-/env
-/frontend/node_modules/
+.env
+
+# backend specific
+backend/node_modules/
+backend/.env
+
+# frontend specific
+frontend/node_modules/
+
 # testing
-/docker-compose.yml
-
-
-/backend/.env
+docker-compose.yml
 
 # misc
 .DS_Store
@@ -17,9 +20,6 @@
 .env.development.local
 .env.test.local
 .env.production.local
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-
