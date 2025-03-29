@@ -10,7 +10,7 @@ function Welcome(){
         {/* text-center mt-[210px] mb-10 text-4xl */}
         <div className='border-t w-full max-w-8xl  items-center px-4 sm:px-6 md:px-8 flex flex-col border-gray-300  bg-blue-600 h-screen'>
             <div className='text-center w-full max-w-3xl sm:text-left w-full max-w-4xl '>
-              <h1 className=' text-center sm:text-left  mb-[50px] w-[800px] text-[20px] text-white mt-12 sm:mt-20 mb-8 sm:mb-12 mx-auto px-4 max-w-md md:max-w-lg lg:max-w-xl  text-base sm:text-lg md:text-xl leading-normal `'>  At Digital Housing, we revolutionize the way you find and manage homes.
+              <h1 className='  sm:text-left  mb-[50px] w-[800px] text-[20px] text-white mt-12 sm:mt-20 mb-8 sm:mb-12 mx-auto px-4 max-w-md md:max-w-lg lg:max-w-6xl  text-base sm:text-lg md:text-xl leading-normal `'>  At Digital Housing, we revolutionize the way you find and manage homes.
                 Our platform offers a seamless experience for browsing rental properties,
                 exploring virtual tours, and managing your housing needs online. 
                 Whether you're a renter looking for the perfect space or a landlord wanting to showcase your property, 
