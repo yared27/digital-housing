@@ -59,7 +59,7 @@ const LoginForm = ()=>{
     }
     return(
       <div className="flex flex-col  items-center px-4  ">text-sm
-        <form onSubmit={handleSubmit} className=" mt-32  sm:p-6 rounded-leg bg-white shadow-lg max-w-md ">
+        <form onSubmit={handleSubmit} className=" mt-32  sm:p-6 rounded-leg bg-white shadow-sm max-w-md ">
             <div className="mb-4">
                 <label className="block text-sm sm:text-base text-gray-700 font-medium mb-2">EMAIL</label>
                 <input type ='email' className="w-full p-2 sm:p-3 rounded focus:ring-2 border border-gray-300" name="email" value={formData.email} onChange={handleChange} required/>
@@ -69,7 +69,7 @@ const LoginForm = ()=>{
                 <input type="password" className="border border-gray-300 w-full p-2 sm:p-3 rounded focus:ring-2  " name="password" value={formData.password} onChange={handleChange} required/>
             </div>
             <div>
-             <button type="submit" className="border w-full mt-8 py-2 sm:py-3 bg-blue-900 hover:bg-blue-600  rounded transition-colors w-4xl text-white">Submit</button>
+             <button type="submit" className="border w-full mt-8 py-2 sm:py-3 bg-blue-600 hover:bg-blue-900  rounded transition-colors w-4xl text-white">Submit</button>
              </div>
          </form> 
             <div className="mt-4 text-center space-y-2">
