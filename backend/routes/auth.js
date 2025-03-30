@@ -9,7 +9,6 @@ const router = express.Router();
 // signup
 router.post('/signup', async (req, res) => {
     const { firstname, lastname, email, phone_number, country, region, city, subcity, password } = req.body;
-    console.log(req.body);
     try {
         const exits_user = await user.findOne({ where: { email } });
         if (exits_user) {
