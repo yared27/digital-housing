@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 function Welcome(){
    return( <div className='inset-0 left-0 right-0 overflow-x-hidden   ' >
-        <div className="space-x-4 object-cover  w-full h-screen bg-center  bg-cover flex justify-left  items-center sm:text-center  " style={{backgroundImage:"url('/images/im.jpg')"}} > 
+        <div className="space-x-4 object-contain object-top  w-full h-screen bg-center  bg-cover flex justify-left  items-center sm:text-center inset-0 " style={{backgroundImage:"url('/images/im.jpg')"}} > 
          <div>
           <h1 className='mx-[20px] text-left mb-40 animation-marquee text-white text-[40px]  font-bold'> Welcome To The DH </h1>
           </div>
